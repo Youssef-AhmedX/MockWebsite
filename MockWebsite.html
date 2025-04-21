@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Saudi Dates | Authentic Saudi Arabian Culture</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Discover premium quality Saudi dates showcasing authentic Saudi Arabian culture, traditions and flavors."
+    />
+    <meta
+      name="keywords"
+      content="Saudi dates, premium dates, Saudi Arabian culture, date fruits, Ajwa, Sukkari"
+    />
+
+    <!-- Open Graph Tags -->
+    <meta
+      property="og:title"
+      content="Premium Saudi Dates | Authentic Saudi Arabian Culture"
+    />
+    <meta
+      property="og:description"
+      content="Discover premium quality Saudi dates showcasing authentic Saudi Arabian culture, traditions and flavors."
+    />
+    <meta property="og:image" content="assets/images/og-image.webp" />
+    <meta property="og:url" content="https://saudidates.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Schema Markup for Products -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Premium Saudi Dates Collection",
+        "description": "Authentic collection of premium quality Saudi Arabian dates.",
+        "image": "assets/images/dates-collection.webp",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "SAR",
+          "lowPrice": "50",
+          "highPrice": "500"
+        }
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "saudi-green": "#006C35",
+              gold: "#D4AF37",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Google Fonts - Amiri for Arabic -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  </head>
+  <body class="bg-white font-sans leading-normal tracking-normal">
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed w-full h-full flex items-center justify-center bg-saudi-green z-50"
+    >
+      <div class="text-center">
+        <div class="loader"></div>
+        <h2
+          class="text-white text-2xl mt-4 font-bold"
+          data-en="Loading Saudi Excellence"
+          data-ar="جاري التحميل..."
+        >
+          Loading Saudi Excellence
+        </h2>
+      </div>
+    </div>
+    <!-- Cookie Consent Banner -->
+    <div
+      id="cookie-consent"
+      class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-lg p-4 flex flex-col md:flex-row items-center justify-between z-30"
+    >
+      <p
+        class="text-gray-800 mb-3 md:mb-0"
+        data-en="We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies."
+        data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. من خلال الاستمرار في زيارة هذا الموقع ، فإنك توافق على استخدامنا لملفات تعريف الارتباط."
+      >
+        We use cookies to enhance your experience. By continuing to visit this
+        site, you agree to our use of cookies.
+      </p>
+      <div class="flex gap-2">
+        <button
+          id="accept-cookies"
+          class="bg-saudi-green text-white px-4 py-2 rounded hover:bg-opacity-90 transition-all"
+          data-en="Accept"
+          data-ar="قبول"
+        >
+          Accept
+        </button>
+        <button
+          id="decline-cookies"
+          class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-opacity-90 transition-all"
+          data-en="Decline"
+          data-ar="رفض"
+        >
+          Decline
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-30 shadow-md"
+    >
+      <nav
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <a href="#" class="flex items-center">
+          <span
+            class="text-saudi-green text-xl font-bold"
+            data-en="Saudi Dates"
+            data-ar="تمور سعودية"
+          >
+            Saudi Dates
+          </span>
+        </a>
+
+        <button id="menu-toggle" class="md:hidden block text-saudi-green">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div id="menu" class="hidden md:flex w-full md:w-auto md:items-center">
+          <ul class="flex flex-col md:flex-row md:ml-auto">
+            <li>
+              <a
+                href="#home"
+                class="block py-2 px-4 text-saudi-green hover:text-gold transition-colors duration-300"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#dates"
+                class="block py-2 px-4 text-saudi-green hover:text-gold transition-colors duration-300"
+                data-en="Dates"
+                data-ar="التمور"
+                >Dates</a
+              >
+            </li>
+            <li>
+              <a
+                href="#cities"
+                class="block py-2 px-4 text-saudi-green hover:text-gold transition-colors duration-300"
+                data-en="Cities"
+                data-ar="المدن"
+                >Cities</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="block py-2 px-4 text-saudi-green hover:text-gold transition-colors duration-300"
+                data-en="FAQ"
+                data-ar="الأسئلة الشائعة"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <button
+                id="language-toggle"
+                class="bg-white/70 md:hidden backdrop-blur-md p-2 rounded-full shadow-lg text-saudi-green hover:bg-white transition-all duration-300"
+              >
+                <span class="px-2">EN</span> |
+                <span class="px-2 opacity-50">عربي</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button
+          id="language-toggle"
+          class="bg-white/70 md:block hidden backdrop-blur-md p-2 rounded-full shadow-lg text-saudi-green hover:bg-white transition-all duration-300"
+        >
+          <span class="px-2">EN</span> |
+          <span class="px-2 opacity-50">عربي</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
+    >
+      <div class="absolute inset-0 z-0 desert-background"></div>
+      <div
+        class="absolute bottom-0 left-0 right-0 z-10 landmarks-silhouette"
+      ></div>
+      <div class="container mx-auto px-4 text-center relative z-20">
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-saudi-green hero-title"
+          data-en="Premium Saudi Dates"
+          data-ar="تمور سعودية فاخرة"
+        >
+          Premium Saudi Dates
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto"
+          data-en="Experience the authentic taste of Arabia with our premium selection of dates from the heart of Saudi Arabia."
+          data-ar="استمتع بالطعم الأصيل للجزيرة العربية مع مجموعتنا المميزة من التمور من قلب المملكة العربية السعودية."
+        >
+          Experience the authentic taste of Arabia with our premium selection of
+          dates from the heart of Saudi Arabia.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#dates"
+            class="bg-saudi-green text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all shadow-lg"
+            data-en="Explore Collection"
+            data-ar="استكشف المجموعة"
+          >
+            Explore Collection
+          </a>
+          <a
+            href="#cities"
+            class="bg-white text-saudi-green border-2 border-saudi-green px-6 py-3 rounded-lg hover:bg-saudi-green hover:text-white transition-all shadow-lg"
+            data-en="Discover Cities"
+            data-ar="اكتشف المدن"
+          >
+            Discover Cities
+          </a>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce"
+      >
+        <a href="#dates" class="text-saudi-green">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 13l5 5 5-5"></path>
+            <path d="M7 6l5 5 5-5"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Dates Showcase Section -->
+    <section id="dates" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-8 text-saudi-green"
+          data-en="Our Premium Date Selection"
+          data-ar="مجموعتنا من التمور الفاخرة"
+        >
+          Our Premium Date Selection
+        </h2>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap justify-center mb-8 gap-2">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-en="All Dates"
+            data-ar="جميع التمور"
+          >
+            All Dates
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="soft"
+            data-en="Soft"
+            data-ar="طري"
+          >
+            Soft
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="semi-dry"
+            data-en="Semi-dry"
+            data-ar="نصف جاف"
+          >
+            Semi-dry
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="dry"
+            data-en="Dry"
+            data-ar="جاف"
+          >
+            Dry
+          </button>
+        </div>
+
+        <!-- Dates Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="dates-grid"
+        >
+          <!-- Date items will be dynamically generated with JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-alt"></div>
+
+    <!-- Featured Cities Section -->
+    <section id="cities" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-8 text-saudi-green"
+          data-en="Date Growing Regions"
+          data-ar="مناطق زراعة التمور"
+        >
+          Date Growing Regions
+        </h2>
+
+        <!-- Tab Navigation - Completely Restructured -->
+        <div class="city-tabs-container">
+          <div class="city-tabs-nav">
+            <button
+              class="city-tab active"
+              data-city="riyadh"
+              data-en="Riyadh"
+              data-ar="الرياض"
+            >
+              Riyadh
+            </button>
+            <button
+              class="city-tab"
+              data-city="jeddah"
+              data-en="Jeddah"
+              data-ar="جدة"
+            >
+              Jeddah
+            </button>
+            <button
+              class="city-tab"
+              data-city="dammam"
+              data-en="Dammam"
+              data-ar="الدمام"
+            >
+              Dammam
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content Container -->
+        <div class="city-content-wrapper">
+          <!-- City content will be dynamically generated with JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-8 text-saudi-green"
+          data-en="Frequently Asked Questions"
+          data-ar="الأسئلة الشائعة"
+        >
+          Frequently Asked Questions
+        </h2>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="faq-accordion">
+            <!-- FAQ items will be dynamically generated with JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-saudi-green text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3
+              class="text-xl font-bold mb-4"
+              data-en="Saudi Dates"
+              data-ar="تمور سعودية"
+            >
+              Saudi Dates
+            </h3>
+            <p
+              class="mb-4"
+              data-en="Premium dates from the heart of Saudi Arabia, showcasing our rich culture and heritage."
+              data-ar="تمور فاخرة من قلب المملكة العربية السعودية، تعرض ثقافتنا وتراثنا الغني."
+            >
+              Premium dates from the heart of Saudi Arabia, showcasing our rich
+              culture and heritage.
+            </p>
+          </div>
+          <div>
+            <h3
+              class="text-xl font-bold mb-4"
+              data-en="Contact Us"
+              data-ar="اتصل بنا"
+            >
+              Contact Us
+            </h3>
+            <p
+              class="mb-2"
+              data-en="Email: info@saudidates.com"
+              data-ar="البريد الإلكتروني: info@saudidates.com"
+            >
+              Email: info@saudidates.com
+            </p>
+            <p
+              class="mb-2"
+              data-en="Phone: +966 50 123 4567"
+              data-ar="الهاتف: ٩٦٦٥٠١٢٣٤٥٦٧+"
+            >
+              Phone: +966 50 123 4567
+            </p>
+            <p
+              data-en="Address: Riyadh, Kingdom of Saudi Arabia"
+              data-ar="العنوان: الرياض، المملكة العربية السعودية"
+            >
+              Address: Riyadh, Kingdom of Saudi Arabia
+            </p>
+          </div>
+          <div>
+            <h3
+              class="text-xl font-bold mb-4"
+              data-en="Subscribe"
+              data-ar="اشترك"
+            >
+              Subscribe
+            </h3>
+            <form>
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-900"
+                />
+                <button
+                  type="submit"
+                  class="bg-gold text-white px-4 py-2 rounded-r hover:bg-opacity-90 transition-all"
+                  data-en="Subscribe"
+                  data-ar="اشترك"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="border-t border-white/20 mt-8 pt-6 text-center">
+          <p
+            data-en="&copy; 2025 Saudi Dates. All rights reserved."
+            data-ar="&copy; ٢٠٢٥ تمور سعودية. جميع الحقوق محفوظة."
+          >
+            &copy; 2025 Saudi Dates. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,629 @@
+/* Saudi Dates Website - Main Stylesheet */
+
+/* CSS Variables for Theme Colors */
+:root {
+  --saudi-green: #006c35;
+  --white: #ffffff;
+  --black: #000000;
+  --gold: #d4af37;
+  --light-sand: #f5f1e6;
+  --dark-sand: #e6dbc9;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+}
+
+/* General Styles & Resets */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+}
+
+/* RTL Support for Arabic */
+html[dir="rtl"] body {
+  font-family: "Amiri", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .date-card-name {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .date-card-type {
+  left: 10px;
+  right: auto;
+}
+
+html[dir="rtl"] .city-highlight-item {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .city-highlight-icon {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .faq-question {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .faq-answer {
+  padding: 0 0 0 1rem;
+}
+
+html[dir="rtl"] .faq-item.active .faq-answer {
+  padding: 0 0 1rem 1rem;
+}
+
+html[dir="rtl"] .slider-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] input {
+  text-align: right;
+}
+
+/* Loading Screen Animation */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--white);
+  border-bottom-color: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Desert Background Animation */
+.desert-background {
+  background: linear-gradient(to bottom, #e6dbc9 0%, #f5f1e6 100%);
+  opacity: 0.8;
+  animation: sandDrift 20s infinite alternate;
+}
+
+@keyframes sandDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Saudi Landmarks Silhouette */
+.landmarks-silhouette {
+  height: 200px;
+  background-image: url("../images/landmarks.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  opacity: 0.7;
+}
+
+/* Animated Hero Title */
+.hero-title {
+  position: relative;
+  display: inline-block;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Dividers with Islamic Patterns */
+.section-divider {
+  height: 60px;
+  background-image: url("../images/pattern-divider.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.section-divider-alt {
+  height: 60px;
+  background-image: url("../images/pattern-divider-alt.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+/* Filter Buttons */
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--white);
+  color: var(--saudi-green);
+  border: 1px solid var(--saudi-green);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background-color: var(--saudi-green);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+  background-color: var(--saudi-green);
+  color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Date Card Styling */
+.date-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.date-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.date-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, var(--saudi-green), var(--gold));
+  z-index: -1;
+  transform: scale(0.98);
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.date-card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.date-card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.date-card-type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--white);
+  color: var(--text-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.date-card-content {
+  padding: 1rem;
+}
+
+.date-card-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.date-card-name h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.date-card-name .arabic-name {
+  font-family: "Amiri", serif;
+  font-size: 1.25rem;
+  color: var(--saudi-green);
+}
+
+.date-card-price {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.date-card-description {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.date-card-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--saudi-green);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.date-card-btn:hover {
+  background-color: var(--gold);
+}
+
+/* City Tabs - Completely Revamped */
+.city-tabs-container {
+  margin-bottom: 2rem;
+}
+
+.city-tabs-nav {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.city-tab {
+  position: relative;
+  padding: 1rem 2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  flex: 1;
+}
+
+.city-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--saudi-green);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.city-tab:hover {
+  color: var(--saudi-green);
+}
+
+.city-tab.active {
+  color: var(--saudi-green);
+  font-weight: 600;
+}
+
+.city-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* City Content */
+.city-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.city-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RTL Support for City Tabs */
+html[dir="rtl"] .city-tabs-nav {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 640px) {
+  .city-tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* City Content */
+.city-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+html[dir="rtl"] .city-header {
+  flex-direction: row-reverse;
+}
+
+.city-skyline {
+  height: 100px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.city-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .city-info-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  html[dir="rtl"] .city-info-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.city-highlights {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.city-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.city-highlight-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--saudi-green);
+  flex-shrink: 0;
+}
+
+.maps-container {
+  aspect-ratio: 16/9;
+  background-color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* FAQ Accordion */
+.faq-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-question-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 1rem 0 0;
+  opacity: 0;
+}
+
+.faq-item.active .faq-question {
+  color: var(--saudi-green);
+}
+
+.faq-item.active .faq-question-icon {
+  transform: rotate(180deg);
+  color: var(--saudi-green);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 1rem 1rem 0;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  #menu {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  #menu.active {
+    display: block;
+  }
+
+  #menu ul {
+    width: 100%;
+  }
+
+  #menu li {
+    margin-bottom: 0.5rem;
+  }
+
+  .city-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  html[dir="rtl"] .city-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Glassmorphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Creative Shape with Clip Path */
+.clip-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+/* Animations for scroll effects - will be enhanced with JS */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.slide-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+html[dir="rtl"] .slide-right {
+  transform: translateX(40px);
+}
+
+.slide-right.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* For image sliders */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: var(--white);
+  transform: scale(1.5);
+}
+
+/* Additional Arabic specific styles */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Enhanced header styles for Arabic */
+html[dir="rtl"] header nav ul {
+  margin-left: 0;
+  margin-right: auto;
+}
