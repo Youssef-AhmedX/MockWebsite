@@ -72,6 +72,7 @@
     <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="../Chat UI/ai-chat-widget.css" />
   </head>
   <body class="bg-white font-sans leading-normal tracking-normal">
     <!-- Loading Screen -->
@@ -506,5 +507,16 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <script src="../Chat UI/ai-chat-widget.js"></script>
+    <script>
+      initAIWidget({
+        primaryColor: "#006c35e6", // Primary theme color
+        secondaryColor: "#d4af37", // Secondary/accent color
+        agentKey: "0195aeb7-6a97-7286-a2ee-fe220073d109", // Authentication key
+        lang: "ar", // 'ar' or 'en'
+        darkMode: false, // Boolean dark mode toggle
+        welcomeMessage: "Welcome! How can we help?", // Custom greeting
+      });
+    </script>
   </body>
 </html>
