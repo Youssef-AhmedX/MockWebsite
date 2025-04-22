@@ -5,29 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premium Saudi Dates | Authentic Saudi Arabian Culture</title>
 
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Discover premium quality Saudi dates showcasing authentic Saudi Arabian culture, traditions and flavors."
-    />
-    <meta
-      name="keywords"
-      content="Saudi dates, premium dates, Saudi Arabian culture, date fruits, Ajwa, Sukkari"
-    />
-
-    <!-- Open Graph Tags -->
-    <meta
-      property="og:title"
-      content="Premium Saudi Dates | Authentic Saudi Arabian Culture"
-    />
-    <meta
-      property="og:description"
-      content="Discover premium quality Saudi dates showcasing authentic Saudi Arabian culture, traditions and flavors."
-    />
-    <meta property="og:image" content="assets/images/og-image.webp" />
-    <meta property="og:url" content="https://saudidates.com" />
-    <meta property="og:type" content="website" />
-
     <!-- Schema Markup for Products -->
     <script type="application/ld+json">
       {
@@ -72,7 +49,10 @@
     <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="../Chat UI/ai-chat-widget.css" />
+    <link
+      rel="stylesheet"
+      href="https://nabih-ai.s3.eu-north-1.amazonaws.com/ai-chat-widget.css"
+    />
   </head>
   <body class="bg-white font-sans leading-normal tracking-normal">
     <!-- Loading Screen -->
@@ -197,24 +177,15 @@
                 >FAQ</a
               >
             </li>
-            <li>
-              <button
-                id="language-toggle"
-                class="bg-white/70 md:hidden backdrop-blur-md p-2 rounded-full shadow-lg text-saudi-green hover:bg-white transition-all duration-300"
-              >
-                <span class="px-2">EN</span> |
-                <span class="px-2 opacity-50">عربي</span>
-              </button>
-            </li>
           </ul>
+          <button
+            id="language-toggle"
+            class="bg-white/70 backdrop-blur-md p-2 rounded-full shadow-lg text-saudi-green hover:bg-white transition-all duration-300"
+          >
+            <span class="px-2">EN</span> |
+            <span class="px-2 opacity-50">عربي</span>
+          </button>
         </div>
-        <button
-          id="language-toggle"
-          class="bg-white/70 md:block hidden backdrop-blur-md p-2 rounded-full shadow-lg text-saudi-green hover:bg-white transition-all duration-300"
-        >
-          <span class="px-2">EN</span> |
-          <span class="px-2 opacity-50">عربي</span>
-        </button>
       </nav>
     </header>
 
@@ -507,16 +478,31 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
-    <script src="../Chat UI/ai-chat-widget.js"></script>
+    <script src="https://nabih-ai.s3.eu-north-1.amazonaws.com/ai-chat-widget.js"></script>
     <script>
-      initAIWidget({
-        primaryColor: "#006c35e6", // Primary theme color
-        secondaryColor: "#d4af37", // Secondary/accent color
-        agentKey: "0195aeb7-6a97-7286-a2ee-fe220073d109", // Authentication key
-        lang: "ar", // 'ar' or 'en'
-        darkMode: false, // Boolean dark mode toggle
-        welcomeMessage: "Welcome! How can we help?", // Custom greeting
-      });
+      // Initialize AI widget with language awareness
+      function updateAIWidget() {
+        // Get current language from global variable
+        const widgetLang = currentLang || "en";
+
+        // Set welcome message based on language
+        const welcomeMsg =
+          widgetLang === "ar"
+            ? "مرحبًا! كيف يمكننا مساعدتك؟"
+            : "Welcome! How can we help?";
+
+        initAIWidget({
+          primaryColor: "#006c35e6", // Primary theme color
+          secondaryColor: "#d4af37", // Secondary/accent color
+          agentKey: "0195aeb7-6a97-7286-a2ee-fe220073d109", // Authentication key
+          lang: widgetLang, // Use current website language
+          darkMode: false, // Boolean dark mode toggle
+          welcomeMessage: welcomeMsg, // Dynamic welcome message
+        });
+      }
+
+      // Call once on page load
+      document.addEventListener("DOMContentLoaded", updateAIWidget);
     </script>
   </body>
 </html>
