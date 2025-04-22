@@ -2,7 +2,6 @@
   {
     "name": "Riyadh",
     "arabicName": "الرياض",
-    "skylineImage": "riyadh-skyline.svg",
     "population": "7.6 million",
     "coordinates": "24.7136° N, 46.6753° E",
     "description": "The capital city of Saudi Arabia and a bustling metropolis blending modern architecture with cultural heritage.",
@@ -11,21 +10,18 @@
       {
         "title": "Date Markets",
         "arabicTitle": "أسواق التمور",
-        "icon": "market",
         "content": "Home to the largest date markets in the Kingdom, offering a wide variety of premium dates.",
         "arabicContent": "تضم أكبر أسواق التمور في المملكة، وتقدم مجموعة واسعة من التمور الفاخرة."
       },
       {
         "title": "Modern Facilities",
         "arabicTitle": "مرافق حديثة",
-        "icon": "building",
         "content": "State-of-the-art date processing factories equipped with the latest technology.",
         "arabicContent": "مصانع معالجة التمور المتطورة المجهزة بأحدث التقنيات."
       },
       {
         "title": "Cultural Heritage",
         "arabicTitle": "التراث الثقافي",
-        "icon": "museum",
         "content": "Experience the rich cultural significance of dates in Saudi tradition and hospitality.",
         "arabicContent": "استمتع بالأهمية الثقافية الغنية للتمور في التقاليد والضيافة السعودية."
       }
@@ -34,7 +30,6 @@
   {
     "name": "Jeddah",
     "arabicName": "جدة",
-    "skylineImage": "jeddah-skyline.svg",
     "population": "4.2 million",
     "coordinates": "21.5433° N, 39.1728° E",
     "description": "The commercial hub of Saudi Arabia and gateway to the holy cities of Mecca and Medina.",
@@ -43,21 +38,18 @@
       {
         "title": "Coastal Distribution",
         "arabicTitle": "التوزيع الساحلي",
-        "icon": "ship",
         "content": "Major port for exporting Saudi dates to international markets across the world.",
         "arabicContent": "ميناء رئيسي لتصدير التمور السعودية إلى الأسواق العالمية في جميع أنحاء العالم."
       },
       {
         "title": "Date Festivals",
         "arabicTitle": "مهرجانات التمور",
-        "icon": "calendar",
         "content": "Annual festivals celebrating the date harvest season with cultural exhibitions.",
         "arabicContent": "مهرجانات سنوية تحتفل بموسم حصاد التمور مع معارض ثقافية."
       },
       {
         "title": "Culinary Innovation",
         "arabicTitle": "الابتكار في الطهي",
-        "icon": "utensils",
         "content": "Home to innovative chefs creating modern recipes using traditional Saudi dates.",
         "arabicContent": "موطن للطهاة المبتكرين الذين يبتكرون وصفات حديثة باستخدام التمور السعودية التقليدية."
       }
@@ -66,7 +58,6 @@
   {
     "name": "Dammam",
     "arabicName": "الدمام",
-    "skylineImage": "dammam-skyline.svg",
     "population": "1.2 million",
     "coordinates": "26.4367° N, 50.1039° E",
     "description": "The capital of the Eastern Province and home to the famous Khalas dates.",
@@ -75,21 +66,18 @@
       {
         "title": "Khalas Excellence",
         "arabicTitle": "تميز الخلاص",
-        "icon": "award",
         "content": "Renowned for producing the premium Khalas dates, celebrated for their distinctive flavor.",
         "arabicContent": "تشتهر بإنتاج تمور الخلاص الفاخرة، المعروفة بنكهتها المميزة."
       },
       {
         "title": "Research Centers",
         "arabicTitle": "مراكز البحوث",
-        "icon": "microscope",
         "content": "Leading agricultural research facilities focused on date palm cultivation and preservation.",
         "arabicContent": "مرافق بحثية زراعية رائدة تركز على زراعة وحفظ نخيل التمر."
       },
       {
         "title": "Traditional Farms",
         "arabicTitle": "المزارع التقليدية",
-        "icon": "tractor",
         "content": "Visit traditional date farms that have preserved ancient farming techniques for generations.",
         "arabicContent": "زيارة مزارع التمور التقليدية التي حافظت على تقنيات الزراعة القديمة لأجيال."
       }
