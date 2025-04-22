@@ -1,7 +1,6 @@
 [
   {
     "name": "Ajwa",
-    "arabicName": "عجوة",
     "type": "soft",
     "price": 120,
     "description": "Premium Madinah dates with soft texture and distinctive taste, known for their numerous health benefits."
@@ -15,56 +14,48 @@
   },
   {
     "name": "Safawi",
-    "arabicName": "صفاوي",
     "type": "semi-dry",
     "price": 70,
     "description": "Dark dates from Madinah with a rich flavor profile and medium sweetness."
   },
   {
     "name": "Segai",
-    "arabicName": "صقعي",
     "type": "dry",
     "price": 95,
     "description": "Distinguished dry dates with a unique texture and intense sweetness."
   },
   {
     "name": "Khudri",
-    "arabicName": "خضري",
     "type": "semi-dry",
     "price": 60,
     "description": "Semi-dry dates with a perfect balance of softness and chewiness."
   },
   {
     "name": "Khalas",
-    "arabicName": "خلاص",
     "type": "soft",
     "price": 110,
     "description": "Premium dates from Eastern Province with an amber color and distinctive caramel notes."
   },
   {
     "name": "Mabroom",
-    "arabicName": "مبروم",
     "type": "dry",
     "price": 90,
     "description": "Elongated dates with a chewy texture and rich flavor from Madinah region."
   },
   {
     "name": "Nabtat Ali",
-    "arabicName": "نبتة علي",
     "type": "semi-dry",
     "price": 75,
     "description": "Semi-dry dates with distinct flavor and balanced sweetness."
   },
   {
     "name": "Shishi",
-    "arabicName": "شيشي",
     "type": "soft",
     "price": 65,
     "description": "Soft and juicy dates with unique flavor from the northern regions."
   },
   {
     "name": "Barhi",
-    "arabicName": "برحي",
     "type": "soft",
     "price": 100,
     "description": "Amber-colored soft dates with a distinctive sweet honey flavor."

@@ -1,85 +1,61 @@
 [
   {
     "name": "Riyadh",
-    "arabicName": "الرياض",
     "population": "7.6 million",
     "coordinates": "24.7136° N, 46.6753° E",
     "description": "The capital city of Saudi Arabia and a bustling metropolis blending modern architecture with cultural heritage.",
-    "arabicDescription": "عاصمة المملكة العربية السعودية ومدينة نابضة بالحياة تجمع بين العمارة الحديثة والتراث الثقافي.",
     "highlights": [
       {
         "title": "Date Markets",
-        "arabicTitle": "أسواق التمور",
-        "content": "Home to the largest date markets in the Kingdom, offering a wide variety of premium dates.",
-        "arabicContent": "تضم أكبر أسواق التمور في المملكة، وتقدم مجموعة واسعة من التمور الفاخرة."
+        "content": "Home to the largest date markets in the Kingdom, offering a wide variety of premium dates."
       },
       {
         "title": "Modern Facilities",
-        "arabicTitle": "مرافق حديثة",
-        "content": "State-of-the-art date processing factories equipped with the latest technology.",
-        "arabicContent": "مصانع معالجة التمور المتطورة المجهزة بأحدث التقنيات."
+        "content": "State-of-the-art date processing factories equipped with the latest technology."
       },
       {
         "title": "Cultural Heritage",
-        "arabicTitle": "التراث الثقافي",
-        "content": "Experience the rich cultural significance of dates in Saudi tradition and hospitality.",
-        "arabicContent": "استمتع بالأهمية الثقافية الغنية للتمور في التقاليد والضيافة السعودية."
+        "content": "Experience the rich cultural significance of dates in Saudi tradition and hospitality."
       }
     ]
   },
   {
     "name": "Jeddah",
-    "arabicName": "جدة",
     "population": "4.2 million",
     "coordinates": "21.5433° N, 39.1728° E",
     "description": "The commercial hub of Saudi Arabia and gateway to the holy cities of Mecca and Medina.",
-    "arabicDescription": "المركز التجاري للمملكة العربية السعودية والبوابة إلى المدن المقدسة مكة والمدينة.",
     "highlights": [
       {
         "title": "Coastal Distribution",
-        "arabicTitle": "التوزيع الساحلي",
-        "content": "Major port for exporting Saudi dates to international markets across the world.",
-        "arabicContent": "ميناء رئيسي لتصدير التمور السعودية إلى الأسواق العالمية في جميع أنحاء العالم."
+        "content": "Major port for exporting Saudi dates to international markets across the world."
       },
       {
         "title": "Date Festivals",
-        "arabicTitle": "مهرجانات التمور",
-        "content": "Annual festivals celebrating the date harvest season with cultural exhibitions.",
-        "arabicContent": "مهرجانات سنوية تحتفل بموسم حصاد التمور مع معارض ثقافية."
+        "content": "Annual festivals celebrating the date harvest season with cultural exhibitions."
       },
       {
         "title": "Culinary Innovation",
-        "arabicTitle": "الابتكار في الطهي",
-        "content": "Home to innovative chefs creating modern recipes using traditional Saudi dates.",
-        "arabicContent": "موطن للطهاة المبتكرين الذين يبتكرون وصفات حديثة باستخدام التمور السعودية التقليدية."
+        "content": "Home to innovative chefs creating modern recipes using traditional Saudi dates."
       }
     ]
   },
   {
     "name": "Dammam",
-    "arabicName": "الدمام",
     "population": "1.2 million",
     "coordinates": "26.4367° N, 50.1039° E",
     "description": "The capital of the Eastern Province and home to the famous Khalas dates.",
-    "arabicDescription": "عاصمة المنطقة الشرقية وموطن تمور الخلاص الشهيرة.",
     "highlights": [
       {
         "title": "Khalas Excellence",
-        "arabicTitle": "تميز الخلاص",
-        "content": "Renowned for producing the premium Khalas dates, celebrated for their distinctive flavor.",
-        "arabicContent": "تشتهر بإنتاج تمور الخلاص الفاخرة، المعروفة بنكهتها المميزة."
+        "content": "Renowned for producing the premium Khalas dates, celebrated for their distinctive flavor."
       },
       {
         "title": "Research Centers",
-        "arabicTitle": "مراكز البحوث",
-        "content": "Leading agricultural research facilities focused on date palm cultivation and preservation.",
-        "arabicContent": "مرافق بحثية زراعية رائدة تركز على زراعة وحفظ نخيل التمر."
+        "content": "Leading agricultural research facilities focused on date palm cultivation and preservation."
       },
       {
         "title": "Traditional Farms",
-        "arabicTitle": "المزارع التقليدية",
-        "content": "Visit traditional date farms that have preserved ancient farming techniques for generations.",
-        "arabicContent": "زيارة مزارع التمور التقليدية التي حافظت على تقنيات الزراعة القديمة لأجيال."
+        "content": "Visit traditional date farms that have preserved ancient farming techniques for generations."
       }
     ]
   }
