@@ -1,5 +1,5 @@
-{
-  "riyadh": {
+[
+  {
     "name": "Riyadh",
     "arabicName": "الرياض",
     "skylineImage": "riyadh-skyline.svg",
@@ -29,10 +29,9 @@
         "content": "Experience the rich cultural significance of dates in Saudi tradition and hospitality.",
         "arabicContent": "استمتع بالأهمية الثقافية الغنية للتمور في التقاليد والضيافة السعودية."
       }
-    ],
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232132.8548055147!2d46.5491159465814!3d24.77067149049441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh!5e0!3m2!1sen!2ssa!4v1650554848652!5m2!1sen!2ssa"
+    ]
   },
-  "jeddah": {
+  {
     "name": "Jeddah",
     "arabicName": "جدة",
     "skylineImage": "jeddah-skyline.svg",
@@ -62,10 +61,9 @@
         "content": "Home to innovative chefs creating modern recipes using traditional Saudi dates.",
         "arabicContent": "موطن للطهاة المبتكرين الذين يبتكرون وصفات حديثة باستخدام التمور السعودية التقليدية."
       }
-    ],
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475325.0313019672!2d38.88150299010593!3d21.449800186524012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1745243853979!5m2!1sen!2seg"
+    ]
   },
-  "dammam": {
+  {
     "name": "Dammam",
     "arabicName": "الدمام",
     "skylineImage": "dammam-skyline.svg",
@@ -95,7 +93,6 @@
         "content": "Visit traditional date farms that have preserved ancient farming techniques for generations.",
         "arabicContent": "زيارة مزارع التمور التقليدية التي حافظت على تقنيات الزراعة القديمة لأجيال."
       }
-    ],
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232132.8548055147!2d50.1039!3d26.4367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e3120295dde5dbb%3A0xeabc5a2b215d34b9!2sDammam!5e0!3m2!1sen!2ssa!4v1650554848652!5m2!1sen!2ssa"
+    ]
   }
-}
+]

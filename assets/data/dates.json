@@ -1,92 +1,72 @@
 [
   {
-    "id": 1,
     "name": "Ajwa",
     "arabicName": "عجوة",
     "type": "soft",
     "price": 120,
-    "description": "Premium Madinah dates with soft texture and distinctive taste, known for their numerous health benefits.",
-    "images": ["ajwa-2.jpg", "ajwa-1.jpg", "ajwa-3.webp"]
+    "description": "Premium Madinah dates with soft texture and distinctive taste, known for their numerous health benefits."
   },
   {
-    "id": 2,
     "name": "Sukkari",
     "arabicName": "سكري",
     "type": "soft",
     "price": 85,
-    "description": "Sweet golden dates from Qassim, with caramel-like flavor and melt-in-your-mouth texture.",
-    "images": ["sukkari-3.jpg", "sukkari-2.jpg", "sukkari-1.jpg"]
+    "description": "Sweet golden dates from Qassim, with caramel-like flavor and melt-in-your-mouth texture."
   },
   {
-    "id": 3,
     "name": "Safawi",
     "arabicName": "صفاوي",
     "type": "semi-dry",
     "price": 70,
-    "description": "Dark dates from Madinah with a rich flavor profile and medium sweetness.",
-    "images": ["safawi-1.webp", "safawi-2.webp"]
+    "description": "Dark dates from Madinah with a rich flavor profile and medium sweetness."
   },
   {
-    "id": 4,
     "name": "Segai",
     "arabicName": "صقعي",
     "type": "dry",
     "price": 95,
-    "description": "Distinguished dry dates with a unique texture and intense sweetness.",
-    "images": ["segai-1.webp", "segai-2.webp", "segai-3.webp"]
+    "description": "Distinguished dry dates with a unique texture and intense sweetness."
   },
   {
-    "id": 5,
     "name": "Khudri",
     "arabicName": "خضري",
     "type": "semi-dry",
     "price": 60,
-    "description": "Semi-dry dates with a perfect balance of softness and chewiness.",
-    "images": ["khudri-1.webp", "khudri-2.webp"]
+    "description": "Semi-dry dates with a perfect balance of softness and chewiness."
   },
   {
-    "id": 6,
     "name": "Khalas",
     "arabicName": "خلاص",
     "type": "soft",
     "price": 110,
-    "description": "Premium dates from Eastern Province with an amber color and distinctive caramel notes.",
-    "images": ["khalas-1.webp", "khalas-2.webp", "khalas-3.webp"]
+    "description": "Premium dates from Eastern Province with an amber color and distinctive caramel notes."
   },
   {
-    "id": 7,
     "name": "Mabroom",
     "arabicName": "مبروم",
     "type": "dry",
     "price": 90,
-    "description": "Elongated dates with a chewy texture and rich flavor from Madinah region.",
-    "images": ["mabroom-1.jpg", "mabroom-2.jpg"]
+    "description": "Elongated dates with a chewy texture and rich flavor from Madinah region."
   },
   {
-    "id": 8,
     "name": "Nabtat Ali",
     "arabicName": "نبتة علي",
     "type": "semi-dry",
     "price": 75,
-    "description": "Semi-dry dates with distinct flavor and balanced sweetness.",
-    "images": ["nabtat-ali-1.webp", "nabtat-ali-2.webp"]
+    "description": "Semi-dry dates with distinct flavor and balanced sweetness."
   },
   {
-    "id": 9,
     "name": "Shishi",
     "arabicName": "شيشي",
     "type": "soft",
     "price": 65,
-    "description": "Soft and juicy dates with unique flavor from the northern regions.",
-    "images": ["shishi-1.webp", "shishi-2.webp"]
+    "description": "Soft and juicy dates with unique flavor from the northern regions."
   },
   {
-    "id": 10,
     "name": "Barhi",
     "arabicName": "برحي",
     "type": "soft",
     "price": 100,
-    "description": "Amber-colored soft dates with a distinctive sweet honey flavor.",
-    "images": ["barhi-1.webp", "barhi-2.webp", "barhi-3.webp"]
+    "description": "Amber-colored soft dates with a distinctive sweet honey flavor."
   }
 ]
